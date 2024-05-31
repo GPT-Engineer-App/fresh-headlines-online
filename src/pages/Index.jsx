@@ -34,7 +34,7 @@ const Index = () => {
         </Heading>
         {articles.map((article) => (
           <Box key={article.id} borderWidth="1px" borderRadius="lg" overflow="hidden" width="100%">
-            <Image src={article.image} alt={article.title} />
+            <Image src={article.image} alt={article.title} maxW="400px" />
             <Box p={6}>
               <Heading as="h2" size="lg" mb={2}>
                 {article.title}
