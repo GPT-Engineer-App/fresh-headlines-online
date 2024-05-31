@@ -34,16 +34,18 @@ const Index = () => {
         </Heading>
         {articles.map((article) => (
           <Box key={article.id} borderWidth="1px" borderRadius="lg" overflow="hidden" width="100%">
-            <Image src={article.image} alt={article.title} maxW="400px" />
-            <Box p={6}>
-              <Heading as="h2" size="lg" mb={2}>
-                {article.title}
-              </Heading>
-              <Text mb={4}>{article.description}</Text>
-              <Link href={article.link} color="teal.500" fontWeight="bold">
-                Read more
-              </Link>
-            </Box>
+            <HStack>
+              <Image src={article.image} alt={article.title} maxW="200px" />
+              <Box p={6}>
+                <Heading as="h2" size="lg" mb={2}>
+                  {article.title}
+                </Heading>
+                <Text mb={4}>{article.description}</Text>
+                <Link href={article.link} color="teal.500" fontWeight="bold">
+                  Read more
+                </Link>
+              </Box>
+            </HStack>
           </Box>
         ))}
         <HStack spacing={4} mt={8}>
